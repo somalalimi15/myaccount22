@@ -2,19 +2,10 @@ const Discord = require("discord.js")
 const client = new Discord.Client();
 var prefix = "--s"
 
-client.on('guildMemberAdd', Sal => { //By Salto7#4595
 
-    var channel =Sal.guild.channels.find('name', 'proven')
-    if (!channel) return;
-    channel.send("** - Welcome To Proven, **");
-    });
-
-client.on('ready', () => {
-    client.channels.find(c => c.id === '504939102030921729').join();
-});
 
 client.on('message', function(message) {
-	const myID = "368768446327947265";
+	const myID = "416643173239226388";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "sn")) {
 		        if(message.author.id !== myID) return;
